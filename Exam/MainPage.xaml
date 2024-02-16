@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Exam.MainPage" >
+
+    <StackLayout Orientation="Vertical"
+                 Padding="5"
+                 Spacing="5">
+        <Label x:Name="AvgRage"/>
+
+        <ListView x:Name="disciplineList"
+                  ItemSelected="disciplineList_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Дисциплина - "/>
+                            <Label Text="{Binding Predmet}"/>
+                            
+                            <Label Text=" Успеваемость за месяц - "/>
+                            <Label Text="{Binding AvgMonth}"/>
+                        </StackLayout>
+                        
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button Text="Добавить"
+                Clicked="Add"/>
+        <Button Text="Редактировать"
+                Clicked="Edit"/>
+        <Button Text="Удалить"
+                Clicked="Delete"/>
+
+        <Button Text="Сохранить"
+                Clicked="Save"/>
+        <Button Text="Загрузить"
+                Clicked="Load"/>
+
+        <Button Text="Средняя успеваемость"
+                x:Name="Avgg"
+                Clicked="Avg"/>
+
+    </StackLayout>
+
+</ContentPage>

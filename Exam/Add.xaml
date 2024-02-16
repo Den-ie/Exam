@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Exam.Add"
+             Title="Add">
+    <VerticalStackLayout Padding="5"
+                         Spacing="5">
+        <Label Text="Дисциплина"/>
+        <Entry x:Name="Discipline"/>
+        <Label Text="Средняя успеваемость"/>
+        <Entry x:Name="Avg"/>
+
+        <Button Clicked="AddClick"
+                Text="Добавить"/>
+        <Button Clicked="ReturnClick"
+                Text="Отмена"/>
+    </VerticalStackLayout>
+</ContentPage>
